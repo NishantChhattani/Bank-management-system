@@ -1,0 +1,133 @@
+
+Software Systems (CS513) Miniproject
+
+Project title - BANK MANAGEMENT SYSTEM
+Submitted by:-
+Nishant Chhattani
+MT2020142
+............................................................................................................................
+
+The project aims at developing a Bank Management System which implements the basic functionalities of a Bank.
+Their are two account priviledges 
+1) Admin
+2) Regular User
+
+Admin -
+
+The Admin has many special priviledges which are used / required for the management and proper functioning of the Bank Management system .The username has to be unique .The admin can perform following operation once he/she is logged in :-
+
+1)Add Account		
+2)Add Customer				
+3)Show All Accounts        
+4)Search Customer 	
+5)Modify Customer				
+6)Delete Customer		
+
+Add Account 	-	  Admin can add new account in the database.For every account following information are added :-
+					  Account Balance
+					  Account Number
+					  Account Status
+					  Account type ( Single / Joint)
+					  Accound holder Details
+					  Joint Account holder details (if any)
+
+Add Customer 	- 	  Admin can add a new Customer . The new customer details are entered such as 
+				   	  Customer Username
+				      Customer Password
+				      Customer Priviledges (Admin / Regular User)
+
+					  Subsequently ,A new Account is created for the new customer and all details are asked from the admin. 
+					  Hence a new Customer is added with a new Account Associated.
+
+Show All Active Accounts - 
+
+					  Admin can view the complete details of all the active accounts with this option.Following details 	are presented on selecting this option :-
+					  Total no. of accounts
+					  Account Number
+					  Account Balance
+					  Account type
+
+Search Customer -	  Admin can veiw details of a particular customer by Entering the Username .
+					  Following Details are presented :-
+					  Customer Usernmae
+					  Customer Password
+					  Customer Account Number
+					  Customer Priviledges
+					  Account Status
+
+Modify Customer - 	  Admin can Modify following details for a particular customer .
+					  1)Username
+					  2)Password
+					  3)Account Customer Priviledge
+					  Admin has the option to choose 1 option at a time and enter the modified details.The entries are registered on the database.
+
+
+Delete Customer - 	  Admin can delete a particular Customer , upon which the Customer and Account status linked with the 						  particular Customer is set to disabled.
+					  
+					  When a customer with Joint account is deleted , the account is not deleted and the account type is changed from Joint to Single. The joint user becomes the only accont holder for that account and later it can be deleted as normal.
+
+
+...........................................................................................................................
+
+Regular User -
+
+When a Regular user is logged in , he/she can perform a number of operations on the account such as :-
+1)Deposit Money
+2)Withdraw Money
+3)Balance enquiry
+4)Password change
+5)Veiw Transaction Details
+
+
+Deposit Money  			 - User can deposit money into their account , the account balance gets updated.
+
+Withdraw Money 			 - User can withdraw money from their account . the amount will be deducted from the balance.
+				 		   If the amount to be withdrawn is more than balance , the operation is failed.
+
+Balance enquiry 		 - The available balance in account can be veiwed .
+
+Password change 		 - The user can change their login password. The new password is to be entered by user and it 								   gets updated.
+
+Veiw Transaction Details - Every transaction that takes place in a users account ( Deposit / Withdrawal) , each entry is 							   in a transaction database with details such as :-
+						   Accont Number 
+						   Amount 
+						   Balance remaining
+						   Transaction date and time
+............................................................................................................................
+
+The program uses Client-Socket connection to implement the Customer system communication .
+
+The database is maintained in 3 files 
+1)account 	  - Stores details of all accounts
+2)Customer 	  - Stores details of all the customers
+3)transaction - Stores all the transaction detials of all the customers
+
+............................................................................................................................
+
+Steps to run the BANK MANAGEMENT SYSTEM :-
+
+1) The server should be run first , 'newserver.c' file.
+2) The client side is then run once server is running , 'newlogin.c' file.
+3) Userid / Password login details are to be entered. 
+4) Username - abc , Password -abc . Admin id / password for trial run are entered into database.
+5) On the basis of account type , either Admin or Regular user menu is loaded.
+6) The user once logged in can perform any operation as many times they like.
+7) Exit option to sigh out from system.
+
+............................................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
